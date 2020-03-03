@@ -1,0 +1,44 @@
+spring:
+  datasource:
+    name: test
+    url: jdbc:mysql://106.52.28.89:13306/test?useUnicode=true&characterEncoding=utf8&useSSL=false&allowMultiQueries=true
+    username: root
+    password: Password01!
+    # 使用druid数据源
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.jdbc.Driver
+    filters: stat
+    maxActive: 20
+    initialSize: 1
+    maxWait: 60000
+    minIdle: 1
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 300000
+    validationQuery: select 'x'//空闲的时候进行检测需要发送验证语句
+    testWhileIdle: true
+    #开启空闲时监测，并设置检测时用的sql语句。指明连接是否被空闲连接回收器(如果有)进行检验
+    testOnBorrow: true
+    #指明是否从池中取出连接前进行检验，如果失败，则去除连接并尝试去除另一个；设置为true后如果要生
+    #效,validationQuery参数必须设置为非空字符串
+    testOnReturn: false
+    #指明是否归还到池中前进行检验
+    poolPreparedStatements: true
+    #开启池的prepared statement 池功能
+    maxOpenPreparedStatements: 20
+    #statement池能够同时分配的打开的statements的最大数量, 如果设置为0表示不限制
+
+
+mybatis:
+  mapper-locations: classpath:mappers/*Mapper.xml
+  type-aliases-package: cn.luotuoyulang.system.entity
+
+fdfs:
+  so-timeout: 1501
+  connect-timeout: 601
+  thumb-image:             #缩略图生成参数
+    width: 200
+    height: 200
+  tracker-list:            #TrackerList参数,支持多个
+    - 39.106.110.85:22122
+  accessUrl: http://39.106.110.85/
+
