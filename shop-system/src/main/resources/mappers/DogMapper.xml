@@ -13,4 +13,9 @@
         select * from Dog where id = #{id}
     </select>
 
+    <!--查询狗列表-->
+    <select id="findDog" resultMap="BaseResultMap">
+        select * from Dog
+    </select>
+
 </mapper>

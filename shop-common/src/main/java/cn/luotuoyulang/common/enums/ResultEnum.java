@@ -9,10 +9,27 @@ import lombok.Data;
  * @Created by liuyuhu
  */
 public enum ResultEnum {
-    CODE_200(200, "成功"),
-    CODE_400(400, "错误的请求参数"),
 
-    CODE_500(500, "内部服务器错误");
+    /**
+     * 成功
+     */
+    SUCCESS(200, "success"),
+
+    /**
+     * 参数有误
+     */
+    PARAM_ERROR(4000, "param is error"),
+
+    /**
+     * 业务出错
+     */
+    ERROR(500, "error"),
+
+    /**
+     * 分页错误码
+     */
+    PAGEHELPER_ERROR(9001, "pagehelper is error");
+
     private Integer code;
     private String msg;
 
