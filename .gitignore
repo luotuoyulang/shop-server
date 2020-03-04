@@ -1,0 +1,11 @@
+# Created by .ignore support plugin (hsz.mobi)
+/.idea/
+/shop-common/target/
+.gitignore
+shop-consumer/target/
+shop-eureka/target/
+shop-gateway/target/
+shop-producer/target/
+shop-system/target/
+/shop-common/target/
+
