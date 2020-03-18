@@ -63,6 +63,9 @@ spring:
 mybatis:
   mapper-locations: classpath:mappers/*Mapper.xml
   type-aliases-package: cn.luotuoyulang.system.entity
+  #开启MyBatis的二级缓存
+  configuration:
+    cache-enabled: true
 
 fdfs:
   so-timeout: 1501

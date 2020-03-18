@@ -11,6 +11,7 @@ import java.util.List;
  * @Date 2020/3/2 23:53
  * @Created by liuyuhu
  */
+//@CacheNamespace(implementation = MybatisRedisCache.class)
 public interface DogMapper {
 
     /**

@@ -1,6 +1,5 @@
 package cn.luotuoyulang;
 
-import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -11,6 +10,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @Created by liuyuhu
  */
 @SpringBootApplication
+//@EnableCaching
 public class SystemApplication {
 
     public static void main(String[] args) {

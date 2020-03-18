@@ -9,6 +9,14 @@
         <result column="createDate" jdbcType="DATE" property="createDate" />
     </resultMap>
 
+    <!--配置二级缓存-->
+<!--    <cache type="cn.luotuoyulang.system.config.MybatisRedisCache">-->
+<!--        <property name="eviction" value="LRU" />-->
+<!--        <property name="flushInterval" value="6000000" />-->
+<!--        <property name="size" value="1024" />-->
+<!--        <property name="readOnly" value="false" />-->
+<!--    </cache>-->
+
     <select id="getDog" resultType="cn.luotuoyulang.system.entity.DogEntity">
         select * from Dog where id = #{id}
     </select>
