@@ -1,5 +1,7 @@
 spring:
   # 配置数据库信息
+  application:
+    name: system
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource   # 指定数据源为druid
     druid:
@@ -60,6 +62,11 @@ spring:
     password: Password01!
     port: 16379
 
+  security:
+    user:
+      name: admin
+      password: 123456
+
 mybatis:
   mapper-locations: classpath:mappers/*Mapper.xml
   type-aliases-package: cn.luotuoyulang.system.entity
@@ -79,3 +86,19 @@ fdfs:
 
 
 
+eureka:
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.cloud.client.ip-address}:${server.port}
+    hostname: 127.0.0.1 #服务注册中心IP地址
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    serviceUrl:
+      defaultZone: http://${spring.security.user.name}:${spring.security.user.password}@${eureka.instance.hostname}:9100/eureka/
+
+info:
+  app:
+    name: ${spring.application.name}
+    description: Eureka 注册中心
+    version: 1.0.0

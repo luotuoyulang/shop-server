@@ -1,0 +1,27 @@
+server:
+  port: 9100
+spring:
+  application:
+    name: shop-eureka  # 服务名称
+  security:
+    user:
+      name: admin
+      password: 123456
+eureka:
+  instance:
+    prefer-ip-address: true  #以IP地址注册到服务中心，相互注册使用IP地址 禁止设置为true，否则DS Replicas列表中会出现不应该出现的节点
+    instance-id: ${spring.cloud.client.ip-address}:${server.port}
+    hostname: 127.0.0.1 #服务注册中心IP地址
+    lease-expiration-duration-in-seconds: 30 # 表示eureka server至上一次收到client的心跳之后，等待下一次心跳的超时时间，在这个时间内若没收到下一次心跳，则将移除该instance。 默认为90秒
+    lease-renewal-interval-in-seconds: 30 # 表示eureka client发送心跳给server端的频率。如果在leaseExpirationDurationInSeconds后，server端没有收到client的心跳，则将摘除该instance 默认30秒
+  client:
+    registerWithEureka: false #是否向服务注册中心注册自己
+    fetchRegistry: false #是否检索服务
+    serviceUrl:
+      defaultZone: http://${spring.security.user.name}:${spring.security.user.password}@${eureka.instance.hostname}:${server.port}/eureka/
+
+info:
+  app:
+    name: ${spring.application.name}
+    description: Eureka 注册中心
+    version: 1.0.0
