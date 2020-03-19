@@ -18,6 +18,8 @@
         <module>shop-eureka-2</module>
         <module>shop-eureka-3</module>
         <module>shop-system-2</module>
+        <module>shop-order</module>
+        <module>shop-order-2</module>
     </modules>
 
     <!--引入springboot-parent父项目-->
@@ -72,8 +74,6 @@
             <artifactId>spring-boot-starter-aop</artifactId>
         </dependency>
 
-
-
         <!-- fastjson -->
         <dependency>
             <groupId>com.alibaba</groupId>
@@ -81,9 +81,16 @@
             <version>${fastjson.version}</version>
         </dependency>
 
+        <!--eureka 客户端-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+        </dependency>
+
+        <!--springcloud feign  spring-cloud-starter-feign 会报错-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-openfeign</artifactId>
         </dependency>
     </dependencies>
 

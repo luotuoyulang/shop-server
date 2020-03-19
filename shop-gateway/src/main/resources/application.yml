@@ -19,10 +19,10 @@ spring:
             - Path=/SYSTEM/**
           filters:
             - StripPrefix=1
-        - id: service-feign
-          uri: lb://FEIGN
+        - id: ORDER
+          uri: lb://ORDER
           predicates:
-            - Path=/service-feign/**
+            - Path=/ORDER/**
           filters:
             - StripPrefix=1
 
