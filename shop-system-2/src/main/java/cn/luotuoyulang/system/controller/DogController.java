@@ -1,7 +1,7 @@
 package cn.luotuoyulang.system.controller;
 
-import cn.luotuoyulang.common.entity.PageResult;
 import cn.luotuoyulang.common.entity.BaseResult;
+import cn.luotuoyulang.common.entity.PageResult;
 import cn.luotuoyulang.common.utils.ResultUtil;
 import cn.luotuoyulang.system.entity.DogEntity;
 import cn.luotuoyulang.system.service.DogService;
@@ -29,7 +29,7 @@ public class DogController {
     @GetMapping("/getDog")
     public BaseResult<DogEntity> getDog(@RequestParam Integer id){
         log.info("查询狗  id [{}] " , id);
-        System.err.println("*************111111111*******");
+        System.err.println("*************2222222222*******");
         return ResultUtil.success(dogService.getDog(id));
     }
 

@@ -2,18 +2,20 @@ package cn.luotuoyulang;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 
 /**
  * @Description TODO
- * @Classname EurekaApplication
- * @Date 2020/3/18 23:22
+ * @Classname SystemApplication
+ * @Date 2020/3/2 20:11
  * @Created by liuyuhu
- * @Email 17600520726@163.com
  */
+@EnableEurekaClient
 @SpringBootApplication
-public class EurekaApplication {
+//@EnableCaching
+public class System2Application {
 
     public static void main(String[] args) {
-        SpringApplication.run(EurekaApplication.class,args);
+        SpringApplication.run(System2Application.class,args);
     }
 }

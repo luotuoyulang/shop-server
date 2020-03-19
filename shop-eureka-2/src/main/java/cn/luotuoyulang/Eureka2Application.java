@@ -5,15 +5,15 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
  * @Description TODO
- * @Classname EurekaApplication
- * @Date 2020/3/18 23:22
+ * @Classname Eureka2Application
+ * @Date 2020/3/19 12:51
  * @Created by liuyuhu
  * @Email 17600520726@163.com
  */
 @SpringBootApplication
-public class EurekaApplication {
+public class Eureka2Application {
 
     public static void main(String[] args) {
-        SpringApplication.run(EurekaApplication.class,args);
+        SpringApplication.run(Eureka2Application.class,args);
     }
 }

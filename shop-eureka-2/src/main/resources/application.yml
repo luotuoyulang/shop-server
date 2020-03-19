@@ -1,5 +1,5 @@
 server:
-  port: 9100
+  port: 9101
 spring:
   application:
     name: shop-eureka  # 服务名称
@@ -16,18 +16,10 @@ eureka:
     registerWithEureka: false #是否向服务注册中心注册自己
     fetchRegistry: false #是否检索服务
     serviceUrl:
-      # 本地集群版
-#      defaultZone: http://${spring.security.user.name}:${spring.security.user.password}@eureka1.com:9101/eureka/,http://${spring.security.user.name}:${spring.security.user.password}@eureka2.com:9102/eureka/
-      # 公网集群版
-      #defaultZone: http://${spring.security.user.name}:${spring.security.user.password}@192.168.119.129:9100/eureka/
-      #defaultZone: http://${spring.security.user.name}:${spring.security.user.password}@${eureka.instance.hostname}:${server.port}/eureka/
-      # 单机集群版
-      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
-  # 关闭注册中心的自我保护机制，防止已关闭的实例无法从注册中心剔除
+      defaultZone: http://${spring.security.user.name}:${spring.security.user.password}@eureka.com:9100/eureka/,http://${spring.security.user.name}:${spring.security.user.password}@eureka2.com:9102/eureka/
   server:
     enable-self-preservation: false #是否开启自我保护模式,如果设置为true ,底下的时间是不生效的
     eviction-interval-timer-in-ms: 2000 #服务注册表清理间隔（单位毫秒，默认是60*1000
-
 info:
   app:
     name: ${spring.application.name}

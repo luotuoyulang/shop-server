@@ -15,6 +15,9 @@
         <module>shop-system</module>
         <module>shop-producer</module>
         <module>shop-consumer</module>
+        <module>shop-eureka-2</module>
+        <module>shop-eureka-3</module>
+        <module>shop-system-2</module>
     </modules>
 
     <!--引入springboot-parent父项目-->
