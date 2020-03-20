@@ -20,7 +20,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @Description 自定义拦截器
+ * @Description 自定义拦截器 https://www.cnblogs.com/zeng1994/p/10853263.html
  * @Classname InterceptorConfig
  * @Date 2020/3/15 12:48
  * @Created by liuyuhu
