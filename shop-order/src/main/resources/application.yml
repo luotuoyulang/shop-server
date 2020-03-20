@@ -84,3 +84,8 @@ eureka:
       #      defaultZone: http://${spring.security.user.name}:${spring.security.user.password}@eureka.com:9100/eureka/,http://${spring.security.user.name}:${spring.security.user.password}@eureka1.com:9101/eureka/,,http://${spring.security.user.name}:${spring.security.user.password}@eureka2.com:9102/eureka/
       #defaultZone: http://${spring.security.user.name}:${spring.security.user.password}@${eureka.instance.hostname}:9100/eureka/
       defaultZone: http://${spring.security.user.name}:${spring.security.user.password}@${eureka.instance.hostname}:9100/eureka/
+
+feign:
+  hystrix:
+    # feign熔断器开关
+    enabled: true

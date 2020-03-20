@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RequestParam;
  * @Created by liuyuhu
  * @Email 17600520726@163.com
  */
-@FeignClient(name = "SYSTEM")
+@FeignClient(name = "SYSTEM" ,fallbackFactory = DogFeginFailBack.class)
 public interface DogFeignClient {
 
 //    @RequestLine("GET /simple/{id}")
