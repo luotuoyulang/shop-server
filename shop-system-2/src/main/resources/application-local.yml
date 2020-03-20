@@ -67,6 +67,9 @@ spring:
       name: admin
       password: 123456
 
+#  jackson:
+#    date-format: yyyy-MM-dd HH:mm:ss
+
 mybatis:
   mapper-locations: classpath:mappers/*Mapper.xml
   type-aliases-package: cn.luotuoyulang.system.entity
@@ -111,5 +114,4 @@ info:
     name: ${spring.application.name}
     description: Eureka 注册中心
     version: 1.0.0
-
 
