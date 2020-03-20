@@ -30,9 +30,9 @@ public class DogController {
     public BaseResult<DogEntity> getDog(@RequestParam Integer id){
         log.info("查询狗  id [{}] " , id);
         System.err.println("*************111111111*******");
-        if(true){
-            throw new RuntimeException("我错啦，我是system  one ");
-        }
+//        if(true){
+//            throw new RuntimeException("我错啦，我是system  one ");
+//        }
         return ResultUtil.success(dogService.getDog(id));
     }
 
